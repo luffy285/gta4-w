@@ -1,0 +1,814 @@
+diagnostic(off, derivative_uniformity);
+struct type_17 {
+    member: array<vec4<f32>, 224>,
+}
+
+struct type_19 {
+    member: array<vec4<u32>, 80>,
+}
+
+struct FragmentOutput {
+    @location(0) member: vec4<f32>,
+    @builtin(sample_mask) member_1: u32,
+}
+
+var<private> global: vec4<f32>;
+var<private> global_1: vec4<f32>;
+var<private> global_2: vec4<f32>;
+var<private> global_3: vec4<f32>;
+var<private> global_4: vec4<f32>;
+var<private> global_5: vec4<f32>;
+var<private> global_6: bool;
+var<private> global_7: vec4<f32>;
+var<private> global_8: u32 = 4294967295u;
+@group(0) @binding(1) 
+var<uniform> global_9: type_17;
+@group(0) @binding(2) 
+var<uniform> global_10: type_19;
+@group(1) @binding(15) 
+var tex2d15_: texture_2d<f32>;
+@group(2) @binding(15) 
+var samp15_: sampler;
+@group(1) @binding(0) 
+var tex2d0_: texture_2d<f32>;
+@group(2) @binding(0) 
+var samp0_: sampler;
+
+fn function_() {
+    var local: vec4<f32>;
+    var local_1: vec3<f32>;
+    var local_2: vec4<f32>;
+    var local_3: vec4<f32>;
+    var local_4: vec4<f32>;
+    var local_5: vec4<f32>;
+    var local_6: vec4<f32>;
+    var local_7: vec4<f32>;
+    var local_8: vec4<f32>;
+    var local_9: vec3<f32>;
+    var local_10: vec3<f32>;
+    var local_11: vec4<f32>;
+    var local_12: vec3<f32>;
+    var local_13: vec3<f32>;
+    var local_14: vec3<f32>;
+    var local_15: vec2<f32>;
+    var local_16: vec3<f32>;
+    var local_17: vec4<f32>;
+    var local_18: vec4<f32>;
+    var local_19: vec4<f32>;
+    var local_20: vec4<f32>;
+    var local_21: vec4<f32>;
+    var local_22: vec4<f32>;
+    var local_23: vec4<f32>;
+    var local_24: vec4<f32>;
+    var local_25: vec4<f32>;
+    var local_26: vec4<f32>;
+    var local_27: vec4<f32>;
+    var local_28: vec4<f32>;
+    var local_29: vec4<f32>;
+    var local_30: vec4<f32>;
+    var local_31: vec4<f32>;
+    var local_32: vec4<f32>;
+    var local_33: vec4<f32>;
+    var local_34: vec4<f32>;
+    var local_35: vec4<f32>;
+    var local_36: vec4<f32>;
+    var local_37: vec4<f32>;
+    var local_38: vec4<f32>;
+    var local_39: vec2<f32>;
+    var phi_2240_: bool;
+    var phi_2252_: bool;
+    var phi_2253_: bool;
+    var phi_2265_: bool;
+    var phi_2266_: bool;
+    var phi_2278_: bool;
+    var phi_2279_: bool;
+    var phi_2299_: bool;
+    var phi_2300_: bool;
+    var phi_2301_: bool;
+    var phi_2313_: bool;
+    var phi_2314_: bool;
+    var phi_2320_: bool;
+    var phi_2374_: u32;
+    var phi_2380_: u32;
+    var phi_2386_: u32;
+    var phi_2396_: u32;
+    var phi_2397_: u32;
+    var phi_2402_: u32;
+    var phi_2403_: u32;
+    var local_40: u32;
+
+    let _e156 = global;
+    let _e157 = global_1;
+    let _e158 = global_2;
+    let _e159 = global_3;
+    let _e160 = global_4;
+    let _e161 = global_5;
+    let _e162 = global_6;
+    local = vec4<f32>();
+    local_17 = vec4<f32>(1.3333334f, 0.000015258789f, -0.1f, 0f);
+    local_18 = vec4<f32>(0.5f, 0.0001f, 0.15915494f, 1.9f);
+    local_19 = vec4<f32>(0.0000001f, 1f, 0.1f, 0.5f);
+    local_20 = vec4<f32>(0.0721f, 0.2125f, 0.7154f, 0.25f);
+    local_21 = vec4<f32>(-0.25f, 256f, 0f, -0.5f);
+    local_22 = vec4<f32>(0.00234375f, 0.0017578126f, 0.001171875f, 0.0005859375f);
+    local_23 = _e157;
+    local_24 = _e158;
+    local_25 = _e159;
+    local_26 = _e160;
+    local_27 = _e161;
+    let _e167 = global_10.member[46u];
+    let _e170 = ((_e156.xy - vec2<f32>(0.5f, 0.5f)) * bitcast<vec2<f32>>(_e167.zw));
+    let _e174 = (_e170 * vec2<f32>(select(-1f, 1f, _e162), 1f));
+    local_30 = vec4<f32>(0f, 0f, 0f, 0f);
+    local_32 = vec4<f32>(0f, 0f, 0f, 0f);
+    local_35 = vec4<f32>(0f, 0f, 0f, 0f);
+    local_36 = vec4<f32>(0f, 0f, 0f, 0f);
+    let _e178 = local_26;
+    let _e179 = _e178.zzz;
+    let _e185 = global_9.member[(u32(992u) >> bitcast<u32>(4u))];
+    let _e186 = _e185.zyx;
+    let _e206 = global_9.member[(u32(1008u) >> bitcast<u32>(4u))];
+    let _e208 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e179 * _e186)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e179) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e186) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e206.zyx);
+    let _e209 = local_25;
+    let _e210 = _e209.zxy;
+    let _e216 = select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e210) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)));
+    local_16 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e210 * _e210)), vec3<u32>(0u, 0u, 0u), ((_e216 | _e216) != vec3<i32>(0i, 0i, 0i))));
+    let _e222 = local_16[0i];
+    let _e224 = local_16[1i];
+    let _e227 = local_16[2i];
+    local_23[3i] = ((_e222 + _e224) + _e227);
+    let _e231 = abs(vec4<f32>(_e174.x, _e174.y, 0f, 0f).xy);
+    let _e237 = global_9.member[(u32(704u) >> bitcast<u32>(4u))];
+    let _e238 = _e237.zw;
+    let _e258 = global_9.member[(u32(704u) >> bitcast<u32>(4u))];
+    let _e259 = _e258.xy;
+    let _e270 = bitcast<vec2<f32>>(select(bitcast<vec2<u32>>((_e231 * _e238)), vec2<u32>(0u, 0u), ((select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e231) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u))) | select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e238) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u)))) != vec2<i32>(0i, 0i)))).xy;
+    let _e271 = bitcast<vec2<f32>>(select(bitcast<vec2<u32>>((_e259 * vec2<f32>(3f, 7.138f))), vec2<u32>(0u, 0u), ((select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e259) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u))) | vec2<i32>(0i, 0i)) != vec2<i32>(0i, 0i)))).xy;
+    local_15 = bitcast<vec2<f32>>(select(bitcast<vec2<u32>>((_e270 * _e271)), vec2<u32>(0u, 0u), ((select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e270) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u))) | select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e271) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u)))) != vec2<i32>(0i, 0i))));
+    let _e287 = local_15[0i];
+    let _e289 = local_15[1i];
+    let _e292 = local_21[2i];
+    local_30[1i] = ((_e287 + _e289) + _e292);
+    let _e295 = local_24;
+    let _e296 = _e295.zxy;
+    let _e302 = select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e296) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)));
+    local_14 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e296 * _e296)), vec3<u32>(0u, 0u, 0u), ((_e302 | _e302) != vec3<i32>(0i, 0i, 0i))));
+    let _e308 = local_14[0i];
+    let _e310 = local_14[1i];
+    let _e313 = local_14[2i];
+    local_23[2i] = ((_e308 + _e310) + _e313);
+    let _e316 = local_23[3i];
+    local_23[3i] = clamp(inverseSqrt(abs(_e316)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e320 = _e178.yyy;
+    let _e326 = global_9.member[(u32(976u) >> bitcast<u32>(4u))];
+    let _e327 = _e326.zyx;
+    let _e344 = _e178.xxx;
+    let _e350 = global_9.member[(u32(960u) >> bitcast<u32>(4u))];
+    let _e351 = _e350.zyx;
+    let _e367 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e344 * _e351)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e344) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e351) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e320 * _e327)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e320) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e327) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e208.xyz).xyz);
+    local_29 = vec4<f32>(_e208.x, _e367.x, _e367.y, _e367.z);
+    let _e373 = local_23;
+    let _e375 = -(_e373.www);
+    let _e376 = _e209.yxz;
+    let _e390 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e375 * _e376)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e375) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e376) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i))));
+    local_31 = vec4<f32>(_e390.x, _e390.y, _e390.z, vec4<f32>(0f, 0f, 0f, 0f).w);
+    let _e396 = local_23[2i];
+    local_23[2i] = clamp(inverseSqrt(abs(_e396)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e400 = local_23;
+    let _e401 = _e400.zzz;
+    let _e411 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e401 * _e296)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e401) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | _e302) != vec3<i32>(0i, 0i, 0i))));
+    local_37 = vec4<f32>(_e411.x, _e411.y, _e411.z, vec4<f32>(0f, 0f, 0f, 0f).w);
+    let _e417 = _e390.zyx;
+    let _e418 = _e411.xyz;
+    let _e428 = select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e418) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)));
+    local_13 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e417 * _e418)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e417) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | _e428) != vec3<i32>(0i, 0i, 0i))));
+    let _e434 = local_13[0i];
+    let _e436 = local_13[1i];
+    let _e439 = local_13[2i];
+    local_31[3i] = ((_e434 + _e436) + _e439);
+    let _e447 = global_9.member[(u32(272u) >> bitcast<u32>(4u))];
+    let _e449 = -(_e447.zxy);
+    local_12 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e418 * _e449)), vec3<u32>(0u, 0u, 0u), ((_e428 | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e449) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i))));
+    let _e461 = local_12[0i];
+    let _e463 = local_12[1i];
+    let _e466 = local_12[2i];
+    local_29[0i] = ((_e461 + _e463) + _e466);
+    let _e469 = _e411.xxx;
+    let _e475 = global_9.member[(u32(992u) >> bitcast<u32>(4u))];
+    let _e476 = _e475.zyx;
+    let _e491 = _e411.zzz;
+    let _e497 = global_9.member[(u32(976u) >> bitcast<u32>(4u))];
+    let _e498 = _e497.zyx;
+    let _e515 = _e411.yyy;
+    let _e521 = global_9.member[(u32(960u) >> bitcast<u32>(4u))];
+    let _e522 = _e521.zyx;
+    let _e538 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e515 * _e522)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e515) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e522) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e491 * _e498)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e491) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e498) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e469 * _e476)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e469) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e476) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))).xyz).xyz);
+    let _e543 = vec4<f32>(_e538.x, _e538.y, _e538.z, _e209.w);
+    let _e544 = local_29;
+    let _e546 = (_e544.yzwx + vec4<f32>(256f, 0f, 0f, -0.25f));
+    local_28 = _e546;
+    let _e548 = local_19[1i];
+    let _e549 = local_19[1i];
+    local_37[3i] = max(_e548, _e549);
+    let _e552 = local_31;
+    let _e553 = _e552.zyxw;
+    let _e554 = local_37;
+    local_11 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e553 * _e554)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e553) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e554) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e570 = local_11[0i];
+    let _e572 = local_11[1i];
+    let _e575 = local_11[2i];
+    let _e578 = local_11[3i];
+    local_23[2i] = (((_e570 + _e572) + _e575) + _e578);
+    let _e581 = -(_e554.zyx);
+    let _e582 = local_23;
+    let _e583 = _e582.zzz;
+    let _e599 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e581 * _e583)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e581) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e583) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e552.xyz);
+    let _e600 = _e546.xzy;
+    let _e606 = select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e600) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)));
+    local_10 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e600 * _e600)), vec3<u32>(0u, 0u, 0u), ((_e606 | _e606) != vec3<i32>(0i, 0i, 0i))));
+    let _e612 = local_10[0i];
+    let _e614 = local_10[1i];
+    let _e617 = local_10[2i];
+    local_23[2i] = ((_e612 + _e614) + _e617);
+    let _e620 = local_17[1i];
+    let _e621 = local_23[2i];
+    local_28[0i] = clamp(bitcast<f32>(select(bitcast<u32>((_e620 * _e621)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e620) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e621) & 2139095040u) == 0u))) != 0i))), 0f, 1f);
+    let _e638 = local_28[0i];
+    local_30[0i] = sqrt(_e638);
+    let _e641 = local_30;
+    let _e642 = _e641.xy;
+    let _e653 = (bitcast<vec2<f32>>(select(bitcast<vec2<u32>>((_e642 * vec2<f32>(1.9f, 0.15915494f))), vec2<u32>(0u, 0u), ((select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e642) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u))) | vec2<i32>(0i, 0i)) != vec2<i32>(0i, 0i)))) + vec2<f32>(0.1f, 0.5f));
+    let _e654 = local_23;
+    local_23 = vec4<f32>(_e654.x, _e654.y, _e653.x, _e653.y);
+    let _e660 = _e538.xyz;
+    let _e661 = _e653.xxx;
+    let _e677 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e660 * _e661)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e660) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e661) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e544.yzw);
+    local_33 = vec4<f32>(_e677.x, _e677.y, _e677.z, vec4<f32>(0f, 0f, 0f, 0f).w);
+    let _e683 = _e677.yz;
+    let _e689 = global_9.member[(u32(912u) >> bitcast<u32>(4u))];
+    let _e690 = _e689.zz;
+    let _e704 = bitcast<vec2<f32>>(select(bitcast<vec2<u32>>((_e683 * _e690)), vec2<u32>(0u, 0u), ((select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e683) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u))) | select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e690) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u)))) != vec2<i32>(0i, 0i))));
+    local_25 = vec4<f32>(_e704.x, _e704.y, _e543.z, _e543.w);
+    let _e710 = local_23[3i];
+    local_25[2i] = fract(_e710);
+    let _e713 = local_25;
+    let _e714 = _e713.zxy;
+    let _e724 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e714 * vec3<f32>(6.2831855f, 0.5f, 0.5f))), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e714) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | vec3<i32>(0i, 0i, 0i)) != vec3<i32>(0i, 0i, 0i))));
+    local_29 = vec4<f32>(_e544.x, _e724.x, _e724.y, _e724.z);
+    let _e731 = local_25[1i];
+    let _e734 = local_25[0i];
+    local_29[0i] = max(abs(_e731), abs(_e734));
+    let _e737 = local_29;
+    let _e739 = (_e737.xy + vec2<f32>(2f, -3.1415927f));
+    local_23 = vec4<f32>(_e654.x, _e654.y, _e739.x, _e739.y);
+    let _e745 = _e599.zyx;
+    let _e751 = global_9.member[(u32(272u) >> bitcast<u32>(4u))];
+    let _e753 = -(_e751.zxy);
+    local_9 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e745 * _e753)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e745) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e753) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i))));
+    let _e769 = local_9[0i];
+    let _e771 = local_9[1i];
+    let _e774 = local_9[2i];
+    local_25[2i] = clamp(((_e769 + _e771) + _e774), 0f, 1f);
+    let _e777 = local_23[2i];
+    local_25[0i] = clamp((1f / _e777), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e780 = _e737.zw;
+    let _e781 = local_25;
+    let _e782 = _e781.xx;
+    let _e796 = bitcast<vec2<f32>>(select(bitcast<vec2<u32>>((_e780 * _e782)), vec2<u32>(0u, 0u), ((select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e780) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u))) | select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e782) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u)))) != vec2<i32>(0i, 0i))));
+    let _e803 = (vec4<f32>(_e796.x, _e796.y, _e781.z, _e781.w).xyz + vec3<f32>(0.5f, 0.5f, 0.0001f));
+    local_25 = vec4<f32>(_e803.x, _e803.y, _e781.z, _e803.z);
+    let _e809 = local_23[3i];
+    local_23[2i] = cos(_e809);
+    let _e811 = local_25[0i];
+    let _e813 = local_19[1i];
+    local_25[2i] = (-(_e811) + _e813);
+    let _e815 = local_23[3i];
+    local_23[3i] = sin(_e815);
+    let _e817 = local_23[3i];
+    let _e818 = -(_e817);
+    let _e820 = local_22[0i];
+    let _e835 = local_25[2i];
+    local_30[0i] = (bitcast<f32>(select(bitcast<u32>((_e818 * _e820)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e818) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e820) & 2139095040u) == 0u))) != 0i))) + _e835);
+    let _e837 = local_23[3i];
+    let _e839 = local_22[2i];
+    let _e854 = local_25[2i];
+    local_29[0i] = (bitcast<f32>(select(bitcast<u32>((_e837 * _e839)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e837) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e839) & 2139095040u) == 0u))) != 0i))) + _e854);
+    let _e856 = local_23;
+    let _e857 = _e856.zwz;
+    let _e868 = local_25;
+    let _e870 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e857 * vec3<f32>(0.00234375f, 0.0017578126f, 0.0017578126f))), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e857) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | vec3<i32>(0i, 0i, 0i)) != vec3<i32>(0i, 0i, 0i)))) + _e868.yyz);
+    let _e871 = local_30;
+    let _e876 = vec4<f32>(_e871.x, _e870.x, _e870.y, _e870.z);
+    local_30 = _e876;
+    let _e877 = _e856.zzw;
+    let _e890 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e877 * vec3<f32>(-0.001171875f, -0.0005859375f, -0.0005859375f))), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(-(_e877)) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | vec3<i32>(0i, 0i, 0i)) != vec3<i32>(0i, 0i, 0i)))) + _e868.yzy);
+    let _e891 = local_29;
+    let _e900 = global_10.member[50u];
+    let _e905 = textureSampleBias(tex2d15_, samp15_, _e876.yx, bitcast<f32>(_e900.w));
+    local_36[0i] = _e905.x;
+    let _e911 = global_10.member[50u];
+    let _e916 = textureSampleBias(tex2d15_, samp15_, _e870.yz, bitcast<f32>(_e911.w));
+    local_36[1i] = _e916.x;
+    let _e922 = global_10.member[50u];
+    let _e927 = textureSampleBias(tex2d15_, samp15_, _e890.zy, bitcast<f32>(_e922.w));
+    local_36[2i] = _e927.x;
+    let _e933 = global_10.member[50u];
+    let _e938 = textureSampleBias(tex2d15_, samp15_, vec4<f32>(_e891.x, _e890.x, _e890.y, _e890.z).yx, bitcast<f32>(_e933.w));
+    local_36[3i] = _e938.x;
+    let _e944 = global_10.member[47u];
+    let _e949 = textureSampleBias(tex2d0_, samp0_, _e856.xy, bitcast<f32>(_e944.x));
+    local_29 = _e949;
+    let _e955 = global_9.member[(u32(3328u) >> bitcast<u32>(4u))];
+    let _e958 = local_20[3i];
+    local_23[0i] = bitcast<f32>(select(bitcast<u32>((_e955.x * _e958)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e955.x) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e958) & 2139095040u) == 0u))) != 0i)));
+    let _e979 = global_9.member[(u32(912u) >> bitcast<u32>(4u))];
+    let _e982 = local_19[3i];
+    local_30[0i] = bitcast<f32>(select(bitcast<u32>((_e979.w * _e982)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e979.w) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e982) & 2139095040u) == 0u))) != 0i)));
+    let _e1002 = global_9.member[(u32(256u) >> bitcast<u32>(4u))];
+    let _e1009 = global_9.member[(u32(256u) >> bitcast<u32>(4u))];
+    local_23[3i] = (_e1002.w - _e1009.z);
+    let _e1017 = global_9.member[(u32(656u) >> bitcast<u32>(4u))];
+    let _e1020 = local_19[1i];
+    local_32[0i] = (-(_e1017.w) + _e1020);
+    let _e1028 = global_9.member[(u32(656u) >> bitcast<u32>(4u))];
+    let _e1035 = global_9.member[(u32(656u) >> bitcast<u32>(4u))];
+    local_30[3i] = (_e1028.y - _e1035.x);
+    let _e1040 = local_24[3i];
+    let _e1047 = global_9.member[(u32(256u) >> bitcast<u32>(4u))];
+    local_30[2i] = (-(_e1040) + _e1047.w);
+    let _e1051 = local_24[3i];
+    let _e1052 = local_24[3i];
+    let _e1059 = global_9.member[(u32(672u) >> bitcast<u32>(4u))];
+    let _e1066 = global_9.member[(u32(688u) >> bitcast<u32>(4u))];
+    let _e1069 = (_e1059.xyz + -(_e1066.xyz));
+    let _e1070 = local_32;
+    local_32 = vec4<f32>(_e1070.x, _e1069.x, _e1069.y, _e1069.z);
+    let _e1081 = global_9.member[(u32(656u) >> bitcast<u32>(4u))];
+    local_30[1i] = (-(_e1081.x) + max(_e1051, _e1052));
+    let _e1092 = global_9.member[(u32(304u) >> bitcast<u32>(4u))];
+    let _e1093 = (-(_e178.xxxx) + _e1092);
+    let _e1099 = global_9.member[(u32(656u) >> bitcast<u32>(4u))];
+    local_23[1i] = clamp((1f / _e1099.x), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1111 = global_9.member[(u32(336u) >> bitcast<u32>(4u))];
+    let _e1112 = (-(_e178.zzzz) + _e1111);
+    let _e1114 = local_29[3i];
+    let _e1115 = local_29[3i];
+    let _e1116 = max(_e1114, _e1115);
+    let _e1117 = local_23[1i];
+    let _e1118 = local_24[3i];
+    local_23[2i] = clamp(bitcast<f32>(select(bitcast<u32>((_e1117 * _e1118)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1117) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1118) & 2139095040u) == 0u))) != 0i))), 0f, 1f);
+    let _e1135 = local_27[3i];
+    local_23[1i] = bitcast<f32>(select(bitcast<u32>((_e1135 * _e1116)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1135) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1116) & 2139095040u) == 0u))) != 0i)));
+    let _e1155 = select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1112) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)));
+    let _e1160 = local_30[3i];
+    local_24[0i] = clamp((1f / _e1160), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1169 = global_9.member[(u32(384u) >> bitcast<u32>(4u))];
+    let _e1170 = -(_e1169);
+    let _e1181 = local_23[3i];
+    local_24[1i] = clamp((1f / _e1181), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1185 = local_23[2i];
+    let _e1191 = global_9.member[(u32(656u) >> bitcast<u32>(4u))];
+    let _e1212 = global_9.member[(u32(656u) >> bitcast<u32>(4u))];
+    local_23[2i] = (bitcast<f32>(select(bitcast<u32>((_e1185 * _e1191.w)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1185) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1191.w) & 2139095040u) == 0u))) != 0i))) + _e1212.z);
+    let _e1220 = select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1093) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)));
+    let _e1225 = (bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1093 * _e1093)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1220 | _e1220) != vec4<i32>(0i, 0i, 0i, 0i)))) + bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1112 * _e1112)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1155 | _e1155) != vec4<i32>(0i, 0i, 0i, 0i)))));
+    let _e1231 = global_9.member[(u32(352u) >> bitcast<u32>(4u))];
+    let _e1232 = -(_e1231);
+    let _e1251 = global_9.member[(u32(320u) >> bitcast<u32>(4u))];
+    let _e1252 = (-(_e178.yyyy) + _e1251);
+    let _e1258 = global_9.member[(u32(736u) >> bitcast<u32>(4u))];
+    let _e1260 = local_23[1i];
+    local_23[1i] = bitcast<f32>(select(bitcast<u32>((_e1258.x * _e1260)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1258.x) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1260) & 2139095040u) == 0u))) != 0i)));
+    let _e1280 = global_9.member[(u32(624u) >> bitcast<u32>(4u))];
+    let _e1282 = local_23[1i];
+    local[3i] = bitcast<f32>(select(bitcast<u32>((_e1280.x * _e1282)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1280.x) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1282) & 2139095040u) == 0u))) != 0i)));
+    let _e1303 = global_9.member[(u32(368u) >> bitcast<u32>(4u))];
+    let _e1304 = -(_e1303);
+    let _e1311 = select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1252) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)));
+    let _e1319 = (bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1252 * _e1304)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1311 | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1304) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i)))) + (bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1093 * _e1232)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1220 | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1232) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i)))) + bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1112 * _e1170)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1155 | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1170) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))))));
+    let _e1326 = (bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1252 * _e1252)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1311 | _e1311) != vec4<i32>(0i, 0i, 0i, 0i)))) + _e1225);
+    local_38 = _e1326;
+    let _e1328 = local_37[0i];
+    let _e1330 = local_21[3i];
+    let _e1345 = local_19[3i];
+    local_23[1i] = clamp((bitcast<f32>(select(bitcast<u32>((_e1328 * _e1330)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1328) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1330) & 2139095040u) == 0u))) != 0i))) + _e1345), 0f, 1f);
+    let _e1348 = local_30;
+    let _e1349 = _e1348.zy;
+    let _e1350 = local_24;
+    let _e1351 = _e1350.yx;
+    let _e1366 = clamp(bitcast<vec2<f32>>(select(bitcast<vec2<u32>>((_e1349 * _e1351)), vec2<u32>(0u, 0u), ((select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e1349) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u))) | select(vec2<i32>(0i, 0i), vec2<i32>(1i, 1i), ((bitcast<vec2<u32>>(_e1351) & vec2<u32>(2139095040u, 2139095040u)) == vec2<u32>(0u, 0u)))) != vec2<i32>(0i, 0i)))), vec2<f32>(0f, 0f), vec2<f32>(1f, 1f));
+    local_34 = vec4<f32>(_e1366.x, _e1225.y, _e1366.y, _e1225.w);
+    let _e1373 = local_34[2i];
+    let _e1374 = local_32[0i];
+    let _e1389 = local_23[2i];
+    local_23[3i] = (bitcast<f32>(select(bitcast<u32>((_e1373 * _e1374)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1373) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1374) & 2139095040u) == 0u))) != 0i))) + _e1389);
+    let _e1391 = _e1366.yyy;
+    let _e1392 = _e1069.xyz;
+    let _e1412 = global_9.member[(u32(688u) >> bitcast<u32>(4u))];
+    let _e1414 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e1391 * _e1392)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e1391) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e1392) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e1412.xyz);
+    local_24 = vec4<f32>(_e1414.x, _e1414.y, _e1414.z, _e1350.w);
+    let _e1420 = local_23;
+    let _e1421 = _e1420.yyy;
+    let _e1427 = global_9.member[(u32(608u) >> bitcast<u32>(4u))];
+    let _e1428 = _e1427.xyz;
+    let _e1448 = global_9.member[(u32(592u) >> bitcast<u32>(4u))];
+    let _e1450 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e1421 * _e1428)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e1421) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e1428) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e1448.xyz);
+    local_32 = vec4<f32>(_e1450.x, _e1450.y, _e1450.z, _e1069.z);
+    let _e1461 = global_9.member[(u32(256u) >> bitcast<u32>(4u))];
+    let _e1463 = (_e1461.xy + vec2<f32>(-1f, -1f));
+    let _e1464 = local_28;
+    local_28 = vec4<f32>(_e1464.x, _e1463.x, _e1463.y, _e1464.w);
+    let _e1471 = local_38[0i];
+    local_35[0i] = clamp(inverseSqrt(abs(_e1471)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1476 = _e554.xxxx;
+    let _e1488 = local_38[1i];
+    local_35[1i] = clamp(inverseSqrt(abs(_e1488)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1493 = -(_e1326);
+    let _e1499 = global_9.member[(u32(400u) >> bitcast<u32>(4u))];
+    let _e1515 = _e554.yyyy;
+    let _e1527 = _e554.zzzz;
+    let _e1538 = (bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1527 * _e1252)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1527) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1311) != vec4<i32>(0i, 0i, 0i, 0i)))) + (bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1515 * _e1093)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1515) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1220) != vec4<i32>(0i, 0i, 0i, 0i)))) + bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1476 * _e1112)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1476) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1155) != vec4<i32>(0i, 0i, 0i, 0i))))));
+    let _e1539 = max((bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1493 * _e1499)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1493) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1499) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i)))) + vec4<f32>(1f, 1f, 1f, 1f)), vec4<f32>(0f, 0f, 0f, 0f));
+    let _e1541 = local_38[2i];
+    local_35[2i] = clamp(inverseSqrt(abs(_e1541)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1551 = select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1539) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)));
+    let _e1555 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1539 * _e1539)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1551 | _e1551) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e1557 = local_38[3i];
+    local_35[3i] = clamp(inverseSqrt(abs(_e1557)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1562 = local_35;
+    let _e1572 = select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1562) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)));
+    let _e1576 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1319 * _e1562)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1319) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1572) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e1582 = global_9.member[(u32(288u) >> bitcast<u32>(4u))];
+    let _e1589 = global_9.member[(u32(288u) >> bitcast<u32>(4u))];
+    local_30[1i] = bitcast<f32>(select(bitcast<u32>((_e1582.x * _e1589.w)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1582.x) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1589.w) & 2139095040u) == 0u))) != 0i)));
+    let _e1610 = global_9.member[(u32(416u) >> bitcast<u32>(4u))];
+    let _e1630 = global_9.member[(u32(432u) >> bitcast<u32>(4u))];
+    let _e1632 = clamp((bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1576 * _e1610)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1576) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1610) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i)))) + _e1630), vec4<f32>(0f, 0f, 0f, 0f), vec4<f32>(1f, 1f, 1f, 1f));
+    local_31 = _e1632;
+    let _e1642 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1555 * _e1539)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1555) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1551) != vec4<i32>(0i, 0i, 0i, 0i))));
+    local_38 = _e1642;
+    let _e1648 = global_9.member[(u32(288u) >> bitcast<u32>(4u))];
+    let _e1655 = global_9.member[(u32(288u) >> bitcast<u32>(4u))];
+    local_30[2i] = bitcast<f32>(select(bitcast<u32>((_e1648.y * _e1655.w)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1648.y) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1655.w) & 2139095040u) == 0u))) != 0i)));
+    let _e1671 = _e599.zzzz;
+    let _e1687 = global_9.member[(u32(288u) >> bitcast<u32>(4u))];
+    let _e1694 = global_9.member[(u32(288u) >> bitcast<u32>(4u))];
+    local_30[3i] = bitcast<f32>(select(bitcast<u32>((_e1687.z * _e1694.w)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1687.z) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1694.w) & 2139095040u) == 0u))) != 0i)));
+    let _e1710 = _e599.yyyy;
+    let _e1733 = max((bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1642 * _e1539)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1642) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1551) != vec4<i32>(0i, 0i, 0i, 0i)))) + vec4<f32>(-0.1f, -0.1f, -0.1f, -0.1f)), vec4<f32>(0f, 0f, 0f, 0f));
+    let _e1735 = local_28[3i];
+    let _e1736 = local_28[3i];
+    local_23[1i] = max(_e1735, _e1736);
+    let _e1738 = _e599.xxxx;
+    let _e1749 = (bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1738 * _e1252)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1738) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1311) != vec4<i32>(0i, 0i, 0i, 0i)))) + (bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1710 * _e1093)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1710) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1220) != vec4<i32>(0i, 0i, 0i, 0i)))) + bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1671 * _e1112)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1671) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1155) != vec4<i32>(0i, 0i, 0i, 0i))))));
+    local_26 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1749 * _e1562)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1749) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1572) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e1761 = local_17[0i];
+    let _e1762 = local_23[1i];
+    local_33[3i] = clamp(bitcast<f32>(select(bitcast<u32>((_e1761 * _e1762)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e1761) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e1762) & 2139095040u) == 0u))) != 0i))), 0f, 1f);
+    let _e1788 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1733 * vec4<f32>(1.1111112f, 1.1111112f, 1.1111112f, 1.1111112f))), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1733) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | vec4<i32>(0i, 0i, 0i, 0i)) != vec4<i32>(0i, 0i, 0i, 0i))));
+    local_37 = _e1788;
+    let _e1790 = local_26[0i];
+    local_26[0i] = clamp(log2(abs(_e1790)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1807 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1788 * _e1538)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1788) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1538) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e1809 = local_26[1i];
+    local_26[1i] = clamp(log2(abs(_e1809)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1823 = clamp(bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1807 * _e1562)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1807) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | _e1572) != vec4<i32>(0i, 0i, 0i, 0i)))), vec4<f32>(0f, 0f, 0f, 0f), vec4<f32>(1f, 1f, 1f, 1f));
+    let _e1825 = local_26[2i];
+    local_26[2i] = clamp(log2(abs(_e1825)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1829 = local_30;
+    let _e1830 = local_33;
+    let _e1831 = _e1830.xwww;
+    let _e1845 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1829 * _e1831)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1829) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1831) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    local_33 = _e1845;
+    let _e1847 = local_26[3i];
+    local_26[3i] = clamp(log2(abs(_e1847)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e1851 = local_23;
+    let _e1852 = _e1851.xxxx;
+    let _e1853 = local_26;
+    local_26 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1852 * _e1853)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1852) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1853) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e1882 = clamp(bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1823 * _e1632)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1823) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1632) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i)))), vec4<f32>(0f, 0f, 0f, 0f), vec4<f32>(1f, 1f, 1f, 1f));
+    local_35 = _e1882;
+    let _e1883 = _e1882.wzxy;
+    let _e1889 = global_9.member[(u32(464u) >> bitcast<u32>(4u))];
+    let _e1890 = _e1889.wzxy;
+    let _e1897 = select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1883) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)));
+    local_8 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1883 * _e1890)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1897 | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1890) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e1906 = local_8[0i];
+    let _e1908 = local_8[1i];
+    let _e1911 = local_8[2i];
+    let _e1914 = local_8[3i];
+    local_31[0i] = (((_e1906 + _e1908) + _e1911) + _e1914);
+    let _e1922 = global_9.member[(u32(496u) >> bitcast<u32>(4u))];
+    let _e1923 = _e1922.wzxy;
+    local_7 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1883 * _e1923)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1897 | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1923) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e1935 = local_7[0i];
+    let _e1937 = local_7[1i];
+    let _e1940 = local_7[2i];
+    let _e1943 = local_7[3i];
+    local_31[1i] = (((_e1935 + _e1937) + _e1940) + _e1943);
+    let _e1946 = local_26[0i];
+    local_26[0i] = exp2(_e1946);
+    let _e1953 = global_9.member[(u32(480u) >> bitcast<u32>(4u))];
+    let _e1954 = _e1953.wzxy;
+    local_6 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1883 * _e1954)), vec4<u32>(0u, 0u, 0u, 0u), ((_e1897 | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1954) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e1966 = local_6[0i];
+    let _e1968 = local_6[1i];
+    let _e1971 = local_6[2i];
+    let _e1974 = local_6[3i];
+    local_31[2i] = (((_e1966 + _e1968) + _e1971) + _e1974);
+    let _e1977 = local_26[1i];
+    local_26[1i] = exp2(_e1977);
+    let _e1979 = local_36;
+    let _e1982 = select(vec4<f32>(0f, 0f, 0f, 0f), vec4<f32>(1f, 1f, 1f, 1f), (_e1979 >= _e1845.xxxx));
+    local_36 = _e1982;
+    let _e1983 = local_26[2i];
+    local_26[2i] = exp2(_e1983);
+    let _e1985 = _e1982.zwxy;
+    local_5 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1985 * vec4<f32>(0.25f, 0.25f, 0.25f, 0.25f))), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1985) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | vec4<i32>(0i, 0i, 0i, 0i)) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e1997 = local_5[0i];
+    let _e1999 = local_5[1i];
+    let _e2002 = local_5[2i];
+    let _e2005 = local_5[3i];
+    local_34[1i] = (((_e1997 + _e1999) + _e2002) + _e2005);
+    let _e2008 = local_26[3i];
+    local_26[3i] = exp2(_e2008);
+    let _e2010 = local_26;
+    let _e2024 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e1882 * _e2010)), vec4<u32>(0u, 0u, 0u, 0u), ((select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e1882) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u))) | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e2010) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e2025 = _e2024.wzxy;
+    let _e2031 = global_9.member[(u32(464u) >> bitcast<u32>(4u))];
+    let _e2032 = _e2031.wzxy;
+    let _e2039 = select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e2025) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)));
+    local_4 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e2025 * _e2032)), vec4<u32>(0u, 0u, 0u, 0u), ((_e2039 | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e2032) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e2048 = local_4[0i];
+    let _e2050 = local_4[1i];
+    let _e2053 = local_4[2i];
+    let _e2056 = local_4[3i];
+    local_23[0i] = (((_e2048 + _e2050) + _e2053) + _e2056);
+    let _e2063 = global_9.member[(u32(496u) >> bitcast<u32>(4u))];
+    let _e2064 = _e2063.wzxy;
+    local_3 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e2025 * _e2064)), vec4<u32>(0u, 0u, 0u, 0u), ((_e2039 | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e2064) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e2076 = local_3[0i];
+    let _e2078 = local_3[1i];
+    let _e2081 = local_3[2i];
+    let _e2084 = local_3[3i];
+    local_23[1i] = (((_e2076 + _e2078) + _e2081) + _e2084);
+    let _e2091 = global_9.member[(u32(3328u) >> bitcast<u32>(4u))];
+    let _e2098 = global_9.member[(u32(3328u) >> bitcast<u32>(4u))];
+    let _e2106 = global_9.member[(u32(480u) >> bitcast<u32>(4u))];
+    let _e2107 = _e2106.wzxy;
+    local_2 = bitcast<vec4<f32>>(select(bitcast<vec4<u32>>((_e2025 * _e2107)), vec4<u32>(0u, 0u, 0u, 0u), ((_e2039 | select(vec4<i32>(0i, 0i, 0i, 0i), vec4<i32>(1i, 1i, 1i, 1i), ((bitcast<vec4<u32>>(_e2107) & vec4<u32>(2139095040u, 2139095040u, 2139095040u, 2139095040u)) == vec4<u32>(0u, 0u, 0u, 0u)))) != vec4<i32>(0i, 0i, 0i, 0i))));
+    let _e2119 = local_2[0i];
+    let _e2121 = local_2[1i];
+    let _e2124 = local_2[2i];
+    let _e2127 = local_2[3i];
+    local_23[2i] = (((_e2119 + _e2121) + _e2124) + _e2127);
+    let _e2130 = local_18[1i];
+    local_28[3i] = (_e2130 + max(_e2091.x, _e2098.x));
+    let _e2132 = local_34;
+    let _e2134 = (vec2<f32>(1f, 1f) - _e2132.xy);
+    local_26 = vec4<f32>(_e2134.x, _e2134.y, _e2024.z, _e2024.w);
+    let _e2141 = local_25[3i];
+    local_26[2i] = clamp(log2(abs(_e2141)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e2145 = local_28;
+    let _e2146 = _e2145.yxw;
+    let _e2147 = local_26;
+    let _e2148 = _e2147.xyz;
+    let _e2162 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2146 * _e2148)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2146) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2148) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i))));
+    local_25 = vec4<f32>(_e868.x, _e2162.x, _e2162.y, _e2162.z);
+    let _e2168 = local_34[1i];
+    let _e2169 = local_25[2i];
+    local_24[3i] = (_e2168 + _e2169);
+    let _e2171 = local_25[3i];
+    local_25[0i] = exp2(_e2171);
+    let _e2173 = _e1829.yzw;
+    let _e2174 = local_25;
+    let _e2175 = _e2174.xxx;
+    let _e2190 = _e1845.ywz;
+    let _e2191 = local_24;
+    let _e2192 = _e2191.www;
+    let _e2202 = select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2192) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)));
+    let _e2207 = local_31;
+    let _e2209 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2190 * _e2192)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2190) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | _e2202) != vec3<i32>(0i, 0i, 0i)))) + _e2207.xyz);
+    local_31 = vec4<f32>(_e2209.x, _e2209.y, _e2209.z, _e2207.w);
+    let _e2215 = _e1450.xyz;
+    let _e2216 = local_27;
+    let _e2217 = _e2216.xxx;
+    let _e2234 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2173 * _e2175)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2173) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2175) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))).xyz;
+    let _e2244 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2234 * _e2192)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2234) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | _e2202) != vec3<i32>(0i, 0i, 0i))));
+    local_30 = vec4<f32>(_e2244.x, _e2244.y, _e2244.z, _e1829.w);
+    let _e2250 = _e2244.xzy;
+    let _e2256 = global_9.member[(u32(272u) >> bitcast<u32>(4u))];
+    let _e2257 = _e2256.www;
+    let _e2272 = local_23;
+    let _e2275 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2250 * _e2257)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2250) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2257) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e2272.xyz).xyz;
+    let _e2281 = global_9.member[(u32(3344u) >> bitcast<u32>(4u))];
+    let _e2282 = _e2281.xxx;
+    let _e2297 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2215 * _e2217)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2215) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2217) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e2209.xzy).zxy;
+    let _e2298 = _e949.zxy;
+    let _e2314 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2297 * _e2298)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2297) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2298) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2275 * _e2282)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2275) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2282) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))).yxz);
+    let _e2319 = vec4<f32>(_e2314.x, _e2314.y, _e2314.z, _e2272.w);
+    let _e2320 = _e2314.xyz;
+    local_1 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2320 * vec3<f32>(0.0721f, 0.2125f, 0.7154f))), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2320) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | vec3<i32>(0i, 0i, 0i)) != vec3<i32>(0i, 0i, 0i))));
+    let _e2332 = local_1[0i];
+    let _e2334 = local_1[1i];
+    let _e2337 = local_1[2i];
+    local_25[0i] = ((_e2332 + _e2334) + _e2337);
+    let _e2340 = local_25;
+    let _e2341 = _e2340.xxx;
+    let _e2343 = (_e2314.yxz + -(_e2341));
+    local_27 = vec4<f32>(_e2343.x, _e2343.y, _e2343.z, _e2216.w);
+    let _e2350 = (_e2340.xy + vec2<f32>(0.0000001f, 1f));
+    local_23 = vec4<f32>(_e2350.x, _e2350.y, _e2319.z, _e2319.w);
+    let _e2356 = _e2343.xyz;
+    let _e2357 = _e2350.yyy;
+    let _e2372 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2356 * _e2357)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2356) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2357) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e2341);
+    local_25 = vec4<f32>(_e2372.x, _e2372.y, _e2372.z, _e2340.w);
+    let _e2378 = local_23[0i];
+    local_23[0i] = clamp(log2(abs(_e2378)), -0x1.fffffep+127f, 0x1.fffffep+127f);
+    let _e2382 = local_26[0i];
+    let _e2383 = local_23[0i];
+    local_23[0i] = bitcast<f32>(select(bitcast<u32>((_e2382 * _e2383)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e2382) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e2383) & 2139095040u) == 0u))) != 0i)));
+    let _e2398 = local_23[0i];
+    let _e2400 = local_28[2i];
+    local_23[0i] = bitcast<f32>(select(bitcast<u32>((_e2398 * _e2400)), 0u, ((select(0i, 1i, ((bitcast<u32>(_e2398) & 2139095040u) == 0u)) | select(0i, 1i, ((bitcast<u32>(_e2400) & 2139095040u) == 0u))) != 0i)));
+    let _e2415 = local_23[0i];
+    local_23[0i] = exp2(_e2415);
+    let _e2417 = _e2372.yxz;
+    let _e2418 = local_23;
+    let _e2419 = _e2418.xxx;
+    let _e2433 = bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2417 * _e2419)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2417) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2419) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i))));
+    local_23 = vec4<f32>(_e2433.x, _e2433.y, _e2433.z, _e2418.w);
+    let _e2442 = (_e2191.xzy + -(_e2433.yxz));
+    local_24 = vec4<f32>(_e2442.x, _e2442.y, _e2442.z, _e2191.w);
+    let _e2448 = _e2442.xzy;
+    let _e2449 = _e2418.www;
+    let _e2465 = (bitcast<vec3<f32>>(select(bitcast<vec3<u32>>((_e2448 * _e2449)), vec3<u32>(0u, 0u, 0u), ((select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2448) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u))) | select(vec3<i32>(0i, 0i, 0i), vec3<i32>(1i, 1i, 1i), ((bitcast<vec3<u32>>(_e2449) & vec3<u32>(2139095040u, 2139095040u, 2139095040u)) == vec3<u32>(0u, 0u, 0u)))) != vec3<i32>(0i, 0i, 0i)))) + _e2433.yzx);
+    let _e2466 = local;
+    local = vec4<f32>(_e2465.x, _e2465.y, _e2465.z, _e2466.w);
+    if (0u != 0u) {
+        let _e2475 = ((0u >> bitcast<u32>(8u)) & 7u);
+        phi_2240_ = false;
+        if (_e2475 == 1u) {
+            let _e2477 = local[3i];
+            let _e2480 = global_10.member[36u];
+            phi_2240_ = (_e2477 < bitcast<f32>(_e2480.y));
+        }
+        let _e2485 = phi_2240_;
+        phi_2253_ = true;
+        if !(_e2485) {
+            phi_2252_ = false;
+            if (_e2475 == 2u) {
+                let _e2488 = local[3i];
+                let _e2491 = global_10.member[36u];
+                phi_2252_ = (_e2488 == bitcast<f32>(_e2491.y));
+            }
+            let _e2496 = phi_2252_;
+            phi_2253_ = _e2496;
+        }
+        let _e2498 = phi_2253_;
+        phi_2266_ = true;
+        if !(_e2498) {
+            phi_2265_ = false;
+            if (_e2475 == 3u) {
+                let _e2501 = local[3i];
+                let _e2504 = global_10.member[36u];
+                phi_2265_ = (_e2501 <= bitcast<f32>(_e2504.y));
+            }
+            let _e2509 = phi_2265_;
+            phi_2266_ = _e2509;
+        }
+        let _e2511 = phi_2266_;
+        phi_2279_ = true;
+        if !(_e2511) {
+            phi_2278_ = false;
+            if (_e2475 == 4u) {
+                let _e2514 = local[3i];
+                let _e2517 = global_10.member[36u];
+                phi_2278_ = (_e2514 > bitcast<f32>(_e2517.y));
+            }
+            let _e2522 = phi_2278_;
+            phi_2279_ = _e2522;
+        }
+        let _e2524 = phi_2279_;
+        phi_2301_ = true;
+        if !(_e2524) {
+            phi_2300_ = false;
+            if (_e2475 == 5u) {
+                let _e2527 = local[3i];
+                let _e2530 = global_10.member[36u];
+                let _e2533 = vec2<f32>(_e2527, bitcast<f32>(_e2530.y));
+                phi_2299_ = true;
+                if !(any((_e2533 != _e2533))) {
+                    let _e2537 = local[3i];
+                    let _e2540 = global_10.member[36u];
+                    phi_2299_ = (_e2537 != bitcast<f32>(_e2540.y));
+                }
+                let _e2545 = phi_2299_;
+                phi_2300_ = _e2545;
+            }
+            let _e2547 = phi_2300_;
+            phi_2301_ = _e2547;
+        }
+        let _e2549 = phi_2301_;
+        phi_2314_ = true;
+        if !(_e2549) {
+            phi_2313_ = false;
+            if (_e2475 == 6u) {
+                let _e2552 = local[3i];
+                let _e2555 = global_10.member[36u];
+                phi_2313_ = (_e2552 >= bitcast<f32>(_e2555.y));
+            }
+            let _e2560 = phi_2313_;
+            phi_2314_ = _e2560;
+        }
+        let _e2562 = phi_2314_;
+        phi_2320_ = true;
+        if !(_e2562) {
+            phi_2320_ = select(false, true, (_e2475 == 7u));
+        }
+        let _e2567 = phi_2320_;
+        if (select(-1f, 1f, _e2567) < 0f) {
+            discard;
+        }
+    }
+    let _e2570 = local[3i];
+    local_39 = (_e170 + vec2<f32>(0.5f, 0.5f));
+    let _e2573 = global_10.member[46u];
+    let _e2577 = global_10.member[46u];
+    switch bitcast<i32>(0u) {
+        default: {
+            if ((_e2573.x & 256u) == 0u) {
+                phi_2403_ = 4294967295u;
+                break;
+            }
+            let _e2583 = local_39[0i];
+            let _e2587 = local_39[1i];
+            let _e2599 = f32(((_e2573.x >> bitcast<u32>(((((u32(_e2583) & 1u) | ((u32(_e2587) & 1u) << bitcast<u32>(1u))) << bitcast<u32>(1u)) & 31u))) & 3u));
+            if (_e2577.y == 1u) {
+                phi_2402_ = select(0u, 1u, (_e2570 >= (1f - (_e2599 * 0.25f))));
+            } else {
+                if (_e2577.y == 2u) {
+                    let _e2622 = (_e2599 * 0.125f);
+                    let _e2625 = select(0u, 2u, (_e2570 >= (0.5f - _e2622)));
+                    phi_2396_ = _e2625;
+                    if (_e2570 >= (1f - _e2622)) {
+                        phi_2396_ = (_e2625 | 1u);
+                    }
+                    let _e2630 = phi_2396_;
+                    phi_2397_ = _e2630;
+                } else {
+                    if (_e2577.y == 4u) {
+                        let _e2603 = (_e2599 * 0.0625f);
+                        let _e2606 = select(0u, 1u, (_e2570 >= (0.75f - _e2603)));
+                        phi_2374_ = _e2606;
+                        if (_e2570 >= (0.25f - _e2603)) {
+                            phi_2374_ = (_e2606 | 4u);
+                        }
+                        let _e2611 = phi_2374_;
+                        phi_2380_ = _e2611;
+                        if (_e2570 >= (0.5f - _e2603)) {
+                            phi_2380_ = (_e2611 | 2u);
+                        }
+                        let _e2616 = phi_2380_;
+                        phi_2386_ = _e2616;
+                        if (_e2570 >= (1f - _e2603)) {
+                            phi_2386_ = (_e2616 | 8u);
+                        }
+                        let _e2621 = phi_2386_;
+                        local_40 = _e2621;
+                    } else {
+                        phi_2403_ = 4294967295u;
+                        break;
+                    }
+                    let _e2661 = local_40;
+                    phi_2397_ = _e2661;
+                }
+                let _e2632 = phi_2397_;
+                phi_2402_ = _e2632;
+            }
+            let _e2638 = phi_2402_;
+            phi_2403_ = _e2638;
+            break;
+        }
+    }
+    let _e2640 = phi_2403_;
+    let _e2641 = local;
+    global_7 = _e2641;
+    global_8 = _e2640;
+    return;
+}
+
+@fragment 
+fn shaderMain(@builtin(position) param: vec4<f32>, @location(0) param_1: vec4<f32>, @location(1) param_2: vec4<f32>, @location(3) param_3: vec4<f32>, @location(6) param_4: vec4<f32>, @location(16) param_5: vec4<f32>, @builtin(front_facing) param_6: bool) -> FragmentOutput {
+    global = param;
+    global_1 = param_1;
+    global_2 = param_2;
+    global_3 = param_3;
+    global_4 = param_4;
+    global_5 = param_5;
+    global_6 = param_6;
+    function_();
+    let _e16 = global_7;
+    let _e17 = global_8;
+    return FragmentOutput(_e16, _e17);
+}

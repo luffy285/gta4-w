@@ -1,0 +1,8 @@
+Put these two files in this folder:
+
+  - GTA IV for the USA Xbox 360, as an .iso
+      (for example "Grand Theft Auto IV (USA) (En,Fr,De,Es,It).iso", 7,835,492,352 bytes)
+  - Its Title Update 8: TU_1A581VI_000000K000000.0000000000205 (3,715,072 bytes)
+
+Then double-click "Play GTA IV" (Mac: Play GTA IV.command, Windows: Play GTA IV.bat).
+No game files come with this release: they have to be your own.
